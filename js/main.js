@@ -2,7 +2,8 @@ $(function(){  //文档加载完毕时调用
  
   
   initialize()
-  createInfoWindows1()
+
+  loadData()
 
 }); 
 
@@ -57,9 +58,9 @@ function initialize()
 
 
 
-function createInfoWindows1() {
+function loadData() {
          $.ajax({
-                url: "/cicit/data/data.json",//json文件位置，文件名
+                url: "http://tokyocoder.com/cicit/data/data.json",//json文件位置，文件名
                 type: "GET",//请求方式为get
                 dataType: "json", //返回数据格式为json
                 success: function(data) {//请求成功完成后要执行的方法 
@@ -67,52 +68,18 @@ function createInfoWindows1() {
                    var pageData=data;
                    for(var i=0;i<data.length;i++){
                        console.log(pageData[i].companyName);
+                       console.log(pageData[i].addressX);
+                       console.log(pageData[i].addressY);
+                       console.log(pageData[i].date);
+                       console.log(pageData[i].capitalBase);
+                       console.log(pageData[i].revenue);
+                       console.log(pageData[i].scale);
+                       console.log(pageData[i].homepage);
                    }
-                }
-            })
-
-}
-
-function createInfoWindows2() {
-             // json文件url
-              console.log("test3");
-        $.getJSON ("/data/data.json", function (data)
-        {
-            $.each (data, function (i, item)
-            {
-               console.log(item.companyName);
-            });
-        });
-
-}
-
-function createInfoWindows3() {
-	$.ajax({
-	    type: "get", //规定请求的类型（GET 或 POST）。
-	    url: "https://github.com/Hyman1993/cicit/blob/dev/data/data.json",  //规定发送请求的 URL。默认是当前页面。
-	    dataType: "jsonp",  //预期的服务器响应的数据类型。
-	    jsonp: "callback",  //在一个 jsonp 中重写回调函数的字符串。
-	    success: function(data) {  //请求成功后返回
-	        console.log(data);
-	    },
-	    error: function() {  //请求失败后返回
-	        console.log('Request Error.');
-	    }
-	});
-}
-
-function createInfoWindows4() {
-         $.ajax({
-                url: "/data/data.json",//json文件位置，文件名
-                type: "GET",//请求方式为get
-                dataType: "json", //返回数据格式为json
-                success: function(data) {//请求成功完成后要执行的方法 
-                   //给info赋值给定义好的变量
-                   var pageData=data;
-                   for(var i=0;i<data.length;i++){
-                       console.log(pageData[i].companyName);
-                   }
-                }
+                },
+                error: function(e) {  //请求失败后返回
+	              console.log('Request Error.');
+	            }
             })
 
 }
