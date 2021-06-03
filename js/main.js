@@ -59,7 +59,7 @@ function initialize()
 
 function createInfoWindows1() {
          $.ajax({
-                url: "/data/data.json",//json文件位置，文件名
+                url: "/cicit/data/data.json",//json文件位置，文件名
                 type: "GET",//请求方式为get
                 dataType: "json", //返回数据格式为json
                 success: function(data) {//请求成功完成后要执行的方法 
@@ -89,7 +89,6 @@ function createInfoWindows2() {
 function createInfoWindows3() {
 	$.ajax({
 	    type: "get", //规定请求的类型（GET 或 POST）。
-	    data: "random="+Math.random(),  //  规定要发送到服务器的数据。
 	    url: "https://github.com/Hyman1993/cicit/blob/dev/data/data.json",  //规定发送请求的 URL。默认是当前页面。
 	    dataType: "jsonp",  //预期的服务器响应的数据类型。
 	    jsonp: "callback",  //在一个 jsonp 中重写回调函数的字符串。
@@ -100,4 +99,20 @@ function createInfoWindows3() {
 	        console.log('Request Error.');
 	    }
 	});
+}
+
+function createInfoWindows4() {
+         $.ajax({
+                url: "/data/data.json",//json文件位置，文件名
+                type: "GET",//请求方式为get
+                dataType: "json", //返回数据格式为json
+                success: function(data) {//请求成功完成后要执行的方法 
+                   //给info赋值给定义好的变量
+                   var pageData=data;
+                   for(var i=0;i<data.length;i++){
+                       console.log(pageData[i].companyName);
+                   }
+                }
+            })
+
 }
