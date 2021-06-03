@@ -2,7 +2,7 @@ $(function(){  //文档加载完毕时调用
  
   
   initialize()
-  createInfoWindows3()
+  createInfoWindows1()
 
 }); 
 
@@ -56,27 +56,10 @@ function initialize()
 }
 
 
+
 function createInfoWindows1() {
-             // json文件url
-            var url = "./data/data.json"
-            var request = new XMLHttpRequest();
-            request.open("get", url);/*设置请求方法与路径*/
-            request.send(null);/*不发送数据到服务器*/
-            request.onload = function () {/*XHR对象获取到返回信息后执行*/
-                if (request.status == 200) {/*返回状态为200，即为数据获取成功*/
-                    var json = JSON.parse(request.responseText);
-                    for(var i=0;i<json.length;i++){
-                        console.log(json[i].name);
-                    }
-                    console.log(json);
-                }
-            }
-
-}
-
-function createInfoWindows2() {
          $.ajax({
-                url: "data.json",//json文件位置，文件名
+                url: "/data/data.json",//json文件位置，文件名
                 type: "GET",//请求方式为get
                 dataType: "json", //返回数据格式为json
                 success: function(data) {//请求成功完成后要执行的方法 
@@ -90,10 +73,10 @@ function createInfoWindows2() {
 
 }
 
-function createInfoWindows3() {
+function createInfoWindows2() {
              // json文件url
               console.log("test3");
-        $.getJSON ("data.json", function (data)
+        $.getJSON ("/data/data.json", function (data)
         {
             $.each (data, function (i, item)
             {
@@ -101,4 +84,20 @@ function createInfoWindows3() {
             });
         });
 
+}
+
+function createInfoWindows3() {
+	$.ajax({
+	    type: "get", //规定请求的类型（GET 或 POST）。
+	    data: "random="+Math.random(),  //  规定要发送到服务器的数据。
+	    url: "https://github.com/Hyman1993/cicit/blob/dev/data/data.json",  //规定发送请求的 URL。默认是当前页面。
+	    dataType: "jsonp",  //预期的服务器响应的数据类型。
+	    jsonp: "callback",  //在一个 jsonp 中重写回调函数的字符串。
+	    success: function(data) {  //请求成功后返回
+	        console.log(data);
+	    },
+	    error: function() {  //请求失败后返回
+	        console.log('Request Error.');
+	    }
+	});
 }
