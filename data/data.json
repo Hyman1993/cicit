@@ -1,0 +1,24 @@
+[ 
+   { 
+      "Num":"1",
+      "companyName":"株式会社イー・ビジネス", 
+      "addressX":35.66813268750143,
+      "addressY":139.75021342354796,
+      "date":"2007年6月", 
+      "capitalBase":"8,800万円",
+      "revenue":"35.5億円",
+      "scale":"201名（2020年4月現在）",
+      "homepage":"https://e-business.co.jp/"
+   }, 
+   { 
+      "Num":"2",
+      "companyName":"トランスコスモス株式会社", 
+      "addressX":35.65557761955471,
+      "addressY":139.70540585530338,
+      "date":"1985年6月18日", 
+      "capitalBase":"290億6,596万円",
+      "revenue":"Missing",
+      "scale":"63,675名（国内：42,905名、海外：20,770名） 2021年3月末現在",
+      "homepage":"https://www.trans-cosmos.co.jp/"
+   }
+]
