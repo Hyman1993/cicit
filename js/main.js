@@ -2,6 +2,7 @@ $(function(){  //文档加载完毕时调用
  
   
   initialize()
+  createInfoWindows3()
 
 }); 
 
@@ -51,5 +52,53 @@ function initialize()
 	});
 	
 
+
+}
+
+
+function createInfoWindows1() {
+             // json文件url
+            var url = "./data/data.json"
+            var request = new XMLHttpRequest();
+            request.open("get", url);/*设置请求方法与路径*/
+            request.send(null);/*不发送数据到服务器*/
+            request.onload = function () {/*XHR对象获取到返回信息后执行*/
+                if (request.status == 200) {/*返回状态为200，即为数据获取成功*/
+                    var json = JSON.parse(request.responseText);
+                    for(var i=0;i<json.length;i++){
+                        console.log(json[i].name);
+                    }
+                    console.log(json);
+                }
+            }
+
+}
+
+function createInfoWindows2() {
+         $.ajax({
+                url: "data.json",//json文件位置，文件名
+                type: "GET",//请求方式为get
+                dataType: "json", //返回数据格式为json
+                success: function(data) {//请求成功完成后要执行的方法 
+                   //给info赋值给定义好的变量
+                   var pageData=data;
+                   for(var i=0;i<data.length;i++){
+                       console.log(pageData[i].companyName);
+                   }
+                }
+            })
+
+}
+
+function createInfoWindows3() {
+             // json文件url
+              console.log("test3");
+        $.getJSON ("data.json", function (data)
+        {
+            $.each (data, function (i, item)
+            {
+               console.log(item.companyName);
+            });
+        });
 
 }
