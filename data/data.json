@@ -1,6 +1,6 @@
 [ 
    { 
-      "Num":"1"
+      "Num":"1",
       "companyName":"株式会社イー・ビジネス", 
       "addressX":35.66813268750143,
       "addressY":139.75021342354796,
@@ -11,7 +11,7 @@
       "homepage":"https://e-business.co.jp/"
    }, 
    { 
-      "Num":"2"
+      "Num":"2",
       "companyName":"トランスコスモス株式会社", 
       "addressX":35.65557761955471,
       "addressY":139.70540585530338,
