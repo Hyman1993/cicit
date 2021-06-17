@@ -7,7 +7,7 @@ Chinese IT company in Tokyo.
 基于以上种种原因，我开始收集这方面的相关数据，并想通过基于地图化的方式给大家展示一下目前日本IT派遣业华人公司的现状。
 
 # 如何贡献这个库
-切换至dev branch，按照格式要求，将公司信息添加至 /data/data.json 数据文件，并创建PR即可。
+fork这个库，切换至dev branch，按照Json格式要求，将公司信息依次添加至 [/data/data.json](https://github.com/Hyman1993/cicit/blob/main/data/data.json) 数据文件，并创建pull request即可。
 
 # 接下来要做的
 继续完善这方面信息，期待更多网友能参与进来，将评价不错的公司，评价差的公司都能客观地反映进去。
