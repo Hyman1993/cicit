@@ -1,5 +1,5 @@
 # CICIT
-Chinese IT company in Tokyo.
+[Chinese IT company in Tokyo.](http://tokyocoder.com/cicit/)
 在日本东京的华人IT公司信息汇总。
 
 # 背景
@@ -11,3 +11,6 @@ fork这个库，切换至dev branch，按照Json格式要求，将公司信息�
 
 # 接下来要做的
 继续完善这方面信息，期待更多网友能参与进来，将评价不错的公司，评价差的公司都能客观地反映进去。
+
+# 网页示例
+![image](https://github.com/Hyman1993/cicit/blob/dev/data/sample.PNG)
