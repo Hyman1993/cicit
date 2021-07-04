@@ -1,5 +1,5 @@
 # About CICIT
-[Chinese IT company in Tokyo.](http://tokyocoder.com/cicit/)
+[Chinese IT company in Tokyo.](http://tokyocoder.com/cicit/)  
 This is a simple website to display Chinese It company information in which is in Tokyo by Google map.
 在日本东京的华人IT公司信息汇总。
 
