@@ -35,7 +35,7 @@ function initializeMapByJson(data)
       //使用谷歌地图定义的事件，给这个marker添加点击事件
       (function (marker, companyItem) {
                 google.maps.event.addListener(marker, "click", function (e) {
-                    infoWindow.setContent("<strong>1. 社名：</strong><a href="+companyItem.homepage+" target=_Blank>"+companyItem.companyName+"</a><br><strong>2.設立年月：</strong>"+companyItem.date+"<br><strong>3.資本金：</strong>"+companyItem.capitalBase+"<br><strong>4.売上高：</strong>"+companyItem.revenue+"<br><strong>5.従業員数：</strong>"+companyItem.scale+"");
+                    infoWindow.setContent("<strong>1.社名：</strong><a href="+companyItem.homepage+" target=_Blank>"+companyItem.companyName+"</a><br><strong>2.設立年月：</strong>"+companyItem.date+"<br><strong>3.資本金：</strong>"+companyItem.capitalBase+"<br><strong>4.売上高：</strong>"+companyItem.revenue+"<br><strong>5.従業員数：</strong>"+companyItem.scale+"");
                     infoWindow.open(map, marker);
                 });
         })(marker, companyItem);
