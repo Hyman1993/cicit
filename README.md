@@ -7,6 +7,14 @@ This is a simple website to display Chinese It company information in which is i
 不少对日本IT业感兴趣的朋友私信或评论问我关于做IT的事情，其中也有很多网友朋友向我打听某些日本IT派遣业的华人公司名声如何？靠不靠谱等。也有网友朋友拜托我推荐一下日本的一些IT派遣公司。
 基于以上种种原因，我开始收集这方面的相关数据，并想通过基于地图化的方式给大家展示一下目前日本IT派遣业华人公司的现状。
 
+# 贡献者 contributor
+感谢以下网友对本库的贡献.
+| No. | Contributor | Resource |
+| :-----|:---- | :----: |
+| 1 | [@Zoracxz](https://github.com/Zoracxz) | [data.json](https://github.com/Hyman1993/cicit/blob/dev/data/data_Zoracxz.json) |
+| 2 | [@wang-hong-zhi](https://github.com/wang-hong-zhi) | [data.json](https://github.com/Hyman1993/cicit/blob/main/data/20210710.json) |
+
+
 # 如何贡献这个库
 fork这个库，切换至dev branch，按照Json格式要求，将公司信息依次添加至 [/data/data.json](https://github.com/Hyman1993/cicit/blob/main/data/data.json) 数据文件，并创建pull request即可。
 
